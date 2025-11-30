@@ -1,0 +1,10 @@
+df = pd.read_csv("weather.csv")
+
+# Show first 5 rows
+print(df.head())
+
+# Show column information
+print(df.info())
+
+# Statistics
+print(df.describe())
