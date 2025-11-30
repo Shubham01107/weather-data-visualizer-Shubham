@@ -1,6 +1,26 @@
+#line graph
 plt.plot(df['date'], df['temperature'])
 plt.title("Daily Temperature")
 plt.xlabel("Date")
 plt.ylabel("Temperature")
 plt.savefig("daily_temperature.png")
+plt.show()
+
+
+# bar graph
+df['month'] = df['date'].dt.month
+monthly_rain = df.groupby('month')['rainfall'].sum()
+plt.bar(monthly_rain.index, monthly_rain.values)
+plt.title("Monthly Rainfall")
+plt.xlabel("Month")
+plt.ylabel("Total Rainfall")
+plt.savefig("monthly_rainfall.png")
+plt.show()
+
+# scatter plot
+plt.scatter(df['humidity'], df['temperature'])
+plt.title("Humidity vs Temperature")
+plt.xlabel("Humidity")
+plt.ylabel("Temperature")
+plt.savefig("humidity_vs_temperature.png")
 plt.show()
