@@ -1,0 +1,8 @@
+# Convert to numpy arrays
+temps = df['temperature'].values
+rain = df['rainfall'].values
+
+print("Mean Temperature:", np.mean(temps))
+print("Min Temperature:", np.min(temps))
+print("Max Temperature:", np.max(temps))
+print("Temperature Std Dev:", np.std(temps))
