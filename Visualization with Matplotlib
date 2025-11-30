@@ -1,0 +1,6 @@
+plt.plot(df['date'], df['temperature'])
+plt.title("Daily Temperature")
+plt.xlabel("Date")
+plt.ylabel("Temperature")
+plt.savefig("daily_temperature.png")
+plt.show()
