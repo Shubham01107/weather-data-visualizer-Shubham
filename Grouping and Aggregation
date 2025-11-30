@@ -1,0 +1,4 @@
+monthly_avg_temp = df.groupby(df['date'].dt.month)['temperature'].mean()
+
+print("Average Temperature per Month:")
+print(monthly_avg_temp)
