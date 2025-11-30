@@ -1,0 +1,11 @@
+# Convert date column to datetime (very important!)
+df['date'] = pd.to_datetime(df['date'])
+
+# Drop rows with missing values
+df = df.dropna()
+
+# Keep only important columns
+df = df[['date', 'temperature', 'humidity', 'rainfall']]
+
+print("Cleaned Data:")
+print(df.head())
